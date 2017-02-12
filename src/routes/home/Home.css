@@ -22,6 +22,15 @@
   max-width: var(--max-content-width);
 }
 
+.container input {
+  display: -webkit-inline-box;
+}
+.info {
+  font-size:20px;
+  color: black;
+  font-weight: 400;
+  font: Open Sans;
+}
 .news {
   padding: 0;
 }
@@ -36,6 +45,33 @@
 }
 .content {
   font-size: 14px;
+  margin-top: 25px;
+}
+.content input {
+  border-radius: 10px;
+
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.content button {
+  border-radius: 10px;
+  width: 100px;
+  background-color: #4CAF50;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.pasteurl input {
+  width: 500px;
+  height: 40px;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  color: black;
 }
 
 .title {

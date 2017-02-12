@@ -19,19 +19,19 @@ function Home({ news }, context) {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h5 className={s.title}>
+        <h5 className={s.title}></h5>
           <img src={logoUrl} width="320" height="320"></img>
-          <div>
+          <div className={s.info}>
           harTack is a community supported HAR file analyser
           </div>
           
             <div className={s.content}>                
                <form className={s.uploader} encType="multipart/form-data" >
                    <input type="file" name="file" className={s.uploadFile}/>
-                   <input type="button" value="Upload" />
+                   <button>Upload</button>
                </form>                
             </div>
-        </h5>
+        <div className={s.pasteurl}><input type="text" placeholder="Paste URL for HAR"></input></div>
       </div>
     </div>
   );
