@@ -17,7 +17,8 @@ import login from './login';
 import register from './register';
 import content from './content';
 import error from './error';
-
+import browse from './browse';
+console.log(browse, login);
 export default {
 
   path: '/',
@@ -28,6 +29,7 @@ export default {
     contact,
     login,
     register,
+    browse,
 
     // place new routes before...
     content,
