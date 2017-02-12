@@ -18,7 +18,7 @@ import register from './register';
 import content from './content';
 import error from './error';
 import browse from './browse';
-console.log(browse, login);
+
 export default {
 
   path: '/',
@@ -38,7 +38,6 @@ export default {
   async action({ next, render, context }) {
     const component = await next();
     if (component === undefined) return component;
-    console.log('component ', component);
     return render(
       <App context={context}>{component}</App>
     );
