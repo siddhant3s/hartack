@@ -34,6 +34,10 @@
   margin-left: 10px;
 }
 
+.navbar {
+  min-width: 50px;
+  background: '../../../header.jpg'
+}
 .nav {
   float: right;
   margin-top: 6px;

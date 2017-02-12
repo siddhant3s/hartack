@@ -30,7 +30,6 @@ export default {
     login,
     register,
     browse,
-
     // place new routes before...
     content,
     error,
@@ -39,6 +38,7 @@ export default {
   async action({ next, render, context }) {
     const component = await next();
     if (component === undefined) return component;
+    console.log('component ', component);
     return render(
       <App context={context}>{component}</App>
     );

@@ -18,10 +18,10 @@ import {
 } from 'react-bootstrap';
 import Link from '../Link';
 import s from './Header.css';
-
+import Navigation from '../Navigation';
 function Header() {
   return (
-    <Navbar>
+    <Navbar className="navbar">
       <Navbar.Header>
         <Navbar.Brand>
           <Link className={s.brand} to="/">harTack</Link>
@@ -37,6 +37,11 @@ function Header() {
           <MenuItem divider />
           <MenuItem eventKey={3.3}>Separated link</MenuItem>
         </NavDropdown>
+      </Nav>
+        <Nav pullRight={true}>
+        <NavItem eventKey={1} href="/browse">About</NavItem>
+        <NavItem eventKey={2} href="#">Contact Us</NavItem>
+        <NavItem eventKey={2} href="#">Login</NavItem>
       </Nav>
     </Navbar>
   );

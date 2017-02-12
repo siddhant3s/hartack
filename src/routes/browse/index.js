@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import Contact from './Browse';
+import Browse from './Browse';
 
 export default {
 
