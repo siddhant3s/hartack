@@ -28,6 +28,7 @@ import schema from './data/schema';
 import routes from './routes';
 import assets from './assets'; // eslint-disable-line import/no-unresolved
 import { port, auth } from './config';
+import backendRoutes from './backend/routes';
 
 const app = express();
 
@@ -78,6 +79,8 @@ app.use('/graphql', expressGraphQL(req => ({
   rootValue: { request: req },
   pretty: process.env.NODE_ENV !== 'production',
 })));
+
+app.use('/api/', backendRoutes);
 
 //
 // Register server-side rendering middleware

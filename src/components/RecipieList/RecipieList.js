@@ -25,13 +25,14 @@ function RecipieList({ recipies }) {
   ));
   return (
     <table id="recipies">
-          <tr>
-            <th>Recipie Name</th>
-            <th>Owner</th>
-            <th>Description</th>
-            <th>Added On</th>
-          </tr>
-
+      <thead>
+        <tr>
+          <th>Recipie Name</th>
+          <th>Owner</th>
+          <th>Description</th>
+          <th>Added On</th>
+        </tr>
+      </thead>
       <tbody>{rows}</tbody>
     </table>
   );
