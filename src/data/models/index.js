@@ -12,6 +12,7 @@ import User from './User';
 import UserLogin from './UserLogin';
 import UserClaim from './UserClaim';
 import UserProfile from './UserProfile';
+import Recipie from './Recipie';
 
 User.hasMany(UserLogin, {
   foreignKey: 'userId',
@@ -26,7 +27,7 @@ User.hasMany(UserClaim, {
   onUpdate: 'cascade',
   onDelete: 'cascade',
 });
-
+User.hasMany(Recipie);
 User.hasOne(UserProfile, {
   foreignKey: 'userId',
   as: 'profile',

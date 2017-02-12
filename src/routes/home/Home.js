@@ -10,28 +10,32 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
-
-const title = 'React Starter Kit';
 import logoUrl from './hartack_logo.svg';
 
+const title = 'React Starter Kit';
 function Home({ news }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h5 className={s.title}></h5>
-          <img src={logoUrl} width="320" height="320"></img>
-          <div className={s.info}>
+        <img src={logoUrl} alt="logo" width="320" height="320" />
+        <div className={s.info}>
           harTack is a community supported HAR file analyser
-          </div>
-          
-            <div className={s.content}>                
-               <form className={s.uploader} encType="multipart/form-data" >
-                   <input type="file" name="file" className={s.uploadFile}/>
-                   <button>Upload</button>
-               </form>                
+        </div>
+        <div className={s.content}>
+          <form
+            className={s.uploader}
+            encType="multipart/form-data"
+            action="/api/submitHar"
+            method="POST"
+          >
+            <input type="file" name="har" className={s.uploadFile} />
+            <button type="submit">Upload</button>
+            <div className={s.pasteurl}>
+              <input type="text" placeholder="Paste URL for HAR" />
             </div>
-        <div className={s.pasteurl}><input type="text" placeholder="Paste URL for HAR"></input></div>
+          </form>
+        </div>
       </div>
     </div>
   );
