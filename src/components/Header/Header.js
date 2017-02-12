@@ -42,9 +42,9 @@ function Header() {
         </NavDropdown>
       </Nav>
       <Nav pullRight={true} className={s.mynav}>
-        <NavItem eventKey={1} href="/browse">About</NavItem>
-        <NavItem eventKey={2} href="#">Contact Us</NavItem>
-        <NavItem eventKey={2} href="#">Login</NavItem>
+        <NavItem eventKey={1} href="/about">About</NavItem>
+        <NavItem eventKey={2} href="/contact">Contact Us</NavItem>
+        <NavItem eventKey={2} href="/login">Login</NavItem>
       </Nav>
     </Navbar>
   );
