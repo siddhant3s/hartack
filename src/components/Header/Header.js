@@ -31,7 +31,7 @@ function Header() {
       </Navbar.Header>
       <Nav className={s.mynav}>
         <NavItem eventKey={1} href="/browse">Browse Recepies</NavItem>
-        <NavItem eventKey={2} href="#">Submit Recipie</NavItem>
+        <NavItem eventKey={2} href="/submit">Submit Recipie</NavItem>
         <NavDropdown eventKey={3} title="More" id="basic-nav-dropdown">
           <MenuItem eventKey={3.1}>What is HarT</MenuItem>
           <MenuItem eventKey={3.2}>Another action</MenuItem>

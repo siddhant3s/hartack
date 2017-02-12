@@ -20,7 +20,7 @@ function RecipieList({ recipies }) {
       <td>{recipie.name}</td>
       <td>{recipie.owner}</td>
       <td>{recipie.description}</td>
-      <td>{recipie.added_on}</td>
+      <td>{recipie.language}</td>
     </tr>
   ));
   return (
@@ -29,7 +29,7 @@ function RecipieList({ recipies }) {
             <th>Recipie Name</th>
             <th>Owner</th>
             <th>Description</th>
-            <th>Added On</th>
+            <th>Language</th>
           </tr>
 
       <tbody>{rows}</tbody>

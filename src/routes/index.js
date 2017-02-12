@@ -18,7 +18,8 @@ import register from './register';
 import content from './content';
 import error from './error';
 import browse from './browse';
-console.log(browse, login);
+import submit from './submit';
+
 export default {
 
   path: '/',
@@ -30,6 +31,7 @@ export default {
     login,
     register,
     browse,
+    submit,
     // place new routes before...
     content,
     error,
