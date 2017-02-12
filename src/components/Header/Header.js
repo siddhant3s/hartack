@@ -19,15 +19,17 @@ import {
 import Link from '../Link';
 import s from './Header.css';
 import Navigation from '../Navigation';
+import logoUrl from '../../routes/home/hartack_logo.svg';
+
 function Header() {
   return (
-    <Navbar className="navbar">
+    <Navbar className={s.mynavbar}>
       <Navbar.Header>
-        <Navbar.Brand>
+        <Navbar.Brand className={s.mytitle}>
           <Link className={s.brand} to="/">harTack</Link>
         </Navbar.Brand>
       </Navbar.Header>
-      <Nav>
+      <Nav className={s.mynav}>
         <NavItem eventKey={1} href="/browse">Browse Recepies</NavItem>
         <NavItem eventKey={2} href="#">Submit Recipie</NavItem>
         <NavDropdown eventKey={3} title="More" id="basic-nav-dropdown">
@@ -35,10 +37,10 @@ function Header() {
           <MenuItem eventKey={3.2}>Another action</MenuItem>
           <MenuItem eventKey={3.3}>Something else here</MenuItem>
           <MenuItem divider />
-          <MenuItem eventKey={3.3}>Separated link</MenuItem>
+          <MenuItem eventKey={3.3}>Separated link{Header}</MenuItem>
         </NavDropdown>
       </Nav>
-        <Nav pullRight={true}>
+      <Nav pullRight={true} className={s.mynav}>
         <NavItem eventKey={1} href="/browse">About</NavItem>
         <NavItem eventKey={2} href="#">Contact Us</NavItem>
         <NavItem eventKey={2} href="#">Login</NavItem>

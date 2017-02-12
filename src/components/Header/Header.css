@@ -9,6 +9,7 @@
 
 @import '../variables.css';
 
+
 :root {
   --brand-color: #61dafb;
 }
@@ -25,24 +26,41 @@
 }
 
 .brand {
-  color: color(var(--brand-color) lightness(+10%));
-  text-decoration: none;
+  color: white;
+/*  color: color(var(--brand-color) lightness(+10%));*/
+/*  text-decoration: none;*/
   font-size: 1.75em; /* ~28px */
 }
 
+.logo {
+  background-color: white;
+}
 .brandTxt {
   margin-left: 10px;
 }
 
-.navbar {
+.mynavbar {
   min-width: 50px;
-  background: '../../../header.jpg'
+  background-color: #4CAF50 !important;
+}
+.mynavbar a {
+  color: black !important;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mynavbar .navbar-header {
+  font-size: 22px;
 }
 .nav {
   float: right;
   margin-top: 6px;
 }
 
+.mynav {
+  color: white;
+  font-size: 20px;
+}
 .banner {
   text-align: center;
 }
