@@ -24,14 +24,14 @@ function Header() {
     <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link className={s.brand} to="/">Your Company</Link>
+          <Link className={s.brand} to="/">harTack</Link>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
-        <NavItem eventKey={1} href="#">Link</NavItem>
-        <NavItem eventKey={2} href="#">Link</NavItem>
-        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}>Action</MenuItem>
+        <NavItem eventKey={1} href="#">Browse Recepies</NavItem>
+        <NavItem eventKey={2} href="#">Submit Recipie</NavItem>
+        <NavDropdown eventKey={3} title="More" id="basic-nav-dropdown">
+          <MenuItem eventKey={3.1}>What is HarT</MenuItem>
           <MenuItem eventKey={3.2}>Another action</MenuItem>
           <MenuItem eventKey={3.3}>Something else here</MenuItem>
           <MenuItem divider />
