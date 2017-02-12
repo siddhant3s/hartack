@@ -18,9 +18,10 @@ function RecipieList({ recipies }) {
   const rows = recipies.map(recipie => (
     <tr key={recipie.name}>
       <td>{recipie.name}</td>
-      <td>{recipie.owner}</td>
+      <td>{recipie.User.profile.displayName}</td>
       <td>{recipie.description}</td>
       <td>{recipie.language}</td>
+      <td><a href={recipie.url}>View</a></td>
     </tr>
   ));
   return (
@@ -31,6 +32,7 @@ function RecipieList({ recipies }) {
           <th>Owner</th>
           <th>Description</th>
           <th>Language</th>
+          <th>View</th>
         </tr>
       </thead>
       <tbody>{rows}</tbody>

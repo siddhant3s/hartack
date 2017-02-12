@@ -52,7 +52,7 @@ passport.use(new FacebookStrategy({
             { type: claimType, value: profile.id },
           ],
           profile: {
-            displayName: profile.displayName,
+            displayName: profile.name.givenName,
             gender: profile._json.gender,
             picture: `https://graph.facebook.com/${profile.id}/picture?type=large`,
           },
@@ -100,7 +100,7 @@ passport.use(new FacebookStrategy({
               { type: claimType, value: accessToken },
             ],
             profile: {
-              displayName: profile.displayName,
+              displayName: profile.name.givenName,
               gender: profile._json.gender,
               picture: `https://graph.facebook.com/${profile.id}/picture?type=large`,
             },

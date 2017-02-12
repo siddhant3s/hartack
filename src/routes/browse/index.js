@@ -9,13 +9,16 @@
 
 import React from 'react';
 import Browse from './Browse';
+import fetch from '../../core/fetch';
 
 export default {
 
   path: '/browse',
 
-  action() {
-    return <Browse />;
+  async action() {
+    const resp = await fetch('/api/recipies');
+    const recipies = await resp.json();
+    return <Browse recipies={recipies} />;
   },
 
 };

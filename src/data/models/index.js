@@ -20,14 +20,15 @@ User.hasMany(UserLogin, {
   onUpdate: 'cascade',
   onDelete: 'cascade',
 });
-
 User.hasMany(UserClaim, {
   foreignKey: 'userId',
   as: 'claims',
   onUpdate: 'cascade',
   onDelete: 'cascade',
 });
-User.hasMany(Recipie);
+
+Recipie.belongsTo(User);
+
 User.hasOne(UserProfile, {
   foreignKey: 'userId',
   as: 'profile',
@@ -40,4 +41,4 @@ function sync(...args) {
 }
 
 export default { sync };
-export { User, UserLogin, UserClaim, UserProfile };
+export { User, UserLogin, UserClaim, UserProfile, Recipie };

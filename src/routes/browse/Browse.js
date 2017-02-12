@@ -14,23 +14,23 @@ import RecipieList from '../../components/RecipieList';
 
 const title = 'Browse Recipes';
 
-const RECIPIES = [
-{name: 'XSS', owner: 'Rajesh', language: 'Python', description:'Used for performing XSS'},
-{name: 'Cross Site Scripting', owner: 'Chakshu', language: 'C++', description:'Used for cross site scripting'},
-{name: 'Something else', owner: 'Sanyam', language: '.NET', description:'Used for something'},
-{name: 'SQL Injection', owner: 'Sid', language: 'Java', description:'Used for checking sql injections'}];
+
 function Browse(props, context) {
   context.setTitle(title);
+  const { recipies } = props;
   return (
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <RecipieList recipies={RECIPIES} />
+        <RecipieList recipies={recipies} />
       </div>
     </div>
   );
 }
 
 Browse.contextTypes = { setTitle: PropTypes.func.isRequired };
+Browse.propTypes = {
+  recipies: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default withStyles(s)(Browse);

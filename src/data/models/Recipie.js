@@ -10,12 +10,22 @@ const Recipie = Model.define('Recipie', {
   name: {
     type: DataType.UUID,
   },
+  description: {
+    type: DataType.STRING(255),
+    defaultValue: '',
+  },
+  url: {
+    type: DataType.TEXT,
+    allowNull: false,
+    validate: { isUrl: true },
+  },
   language: {
     type: DataType.ENUM('python', 'js'),
     defaultValue: 'python',
   },
   definition: {
     type: DataType.TEXT,
+    allowNull: false,
   },
 });
 

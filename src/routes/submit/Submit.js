@@ -13,36 +13,36 @@ import s from './Submit.css';
 
 const title = 'Submit Recipe';
 
-const languages = ["Javascript", "C++", "Python", "Java"];
+const languages = ['Javascript', 'C++', 'Python', 'Java'];
 function Submit(props, context) {
   context.setTitle(title);
   const rows = languages.map(l => (
-    <option value={l}>{l}</option>
+    <option key={l} value={l}>{l}</option>
   ));
   return (
     <div className={s.root}>
       <div className={s.container}>
         <h2>Submit your recipe here and contribute to the community !! </h2>
-        <form>
+        <form method="post" action="/api/recipie">
           <div className={s.name}>
-            <label>Recipe Name</label><br/>
-            <input type="text" placeholder="Enter recipe name"></input>
+            <label htmlFor="recipieName">Recipe Name</label><br />
+            <input type="text" name="recpieName" placeholder="Enter recipe name" />
           </div>
           <div className={s.name}>
-            <label>Recipe Description</label><br/>
-            <input type="text" placeholder="Enter recipe description"></input>
+            <label htmlFor="recpieDescription">Recipe Description</label><br />
+            <input type="text" name="recipieDescription" placeholder="Enter recipe description" />
           </div>
           <div className={s.name}>
-            <label>Recipe URL</label><br/>
-            <input type="text" placeholder="Enter recipe URL"></input>
+            <label htmlFor="recipieUrl">Recipe URL</label><br />
+            <input type="text" name="recipieUrl" placeholder="Enter recipe URL" />
           </div>
           <div>
-            <label>Language</label><br/>
-            <select>
+            <label htmlFor="recipieLang">Language</label><br />
+            <select name="recipieLang">
               {rows}
             </select>
           </div>
-        <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
 
 
