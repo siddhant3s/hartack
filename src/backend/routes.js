@@ -3,7 +3,8 @@ import multipart from 'connect-multiparty';
 import { Recipie, User, UserProfile } from '../data/models';
 import fetch from '../core/fetch';
 
-const { copySync, ensureDirSync } = require('fs-extra');
+
+const { copySync, ensureDirSync, readFileSync } = require('fs-extra');
 
 const router = new Router();
 const multipartMiddleware = multipart();
@@ -12,7 +13,7 @@ router.post('/submitHar', multipartMiddleware, async (req, res) => {
   const { har } = req.files;
   ensureDirSync('./harfiles');
   copySync(har.path, `./harfiles/${har.originalFilename}`);
-  res.redirect('/');
+  res.redirect(`/run/${har.originalFilename}`);
 });
 
 router.post('/recipie', async (req, res) => {
@@ -43,9 +44,14 @@ router.post('/recipie', async (req, res) => {
 
 router.get('/recipies', async (req, res) => {
   const recipies = await Recipie.findAll({
-    attributes: { exclude: ['definition'] },
     include: [{ model: User, include: [{ model: UserProfile, as: 'profile' }] }],
   });
   res.json(recipies);
+});
+
+router.get('/file/:filename', async (req, res) => {
+  const { filename } = req.params;
+  const data = readFileSync(`./harfiles/${filename}`);
+  res.send(data);
 });
 export default router;

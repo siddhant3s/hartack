@@ -19,6 +19,7 @@ import content from './content';
 import error from './error';
 import browse from './browse';
 import submit from './submit';
+import run from './run';
 
 export default {
 
@@ -31,6 +32,7 @@ export default {
     login,
     register,
     browse,
+    run,
     submit,
     // place new routes before...
     content,
