@@ -3,8 +3,9 @@
 A community driven platform to analyze HAR files for vulnerability and slowness
 This was the winning entry in the Devweek hackathon for Perfecto's Challange.
 Details of challenge: https://github.com/perfectomobile/HAR
-
+PS: This is built with help of the react-starter-kit(https://github.com/kriasoft/react-starter-kit) which helps you avoid writing boiler plate code. 
 #### Warning: This project executes user submited code in their browser. It utilizes javascript's eval(). Not ready for production without proper sandboxing
+
 
 ### Quick start ###
 
